@@ -1,6 +1,21 @@
 @AgriculturalCrm.Api_HostAddress = http://localhost:5131
 
-GET {{AgriculturalCrm.Api_HostAddress}}/weatherforecast/
+### Listar clientes
+GET {{AgriculturalCrm.Api_HostAddress}}/api/clientes
 Accept: application/json
+
+###
+
+### Crear cliente
+POST {{AgriculturalCrm.Api_HostAddress}}/api/clientes
+Content-Type: application/json
+
+{
+  "nombre": "María López",
+  "email": "maria@example.com",
+  "telefono": "+573001112233",
+  "nombreFinca": "El Roble",
+  "hectareas": 15.5
+}
 
 ###
