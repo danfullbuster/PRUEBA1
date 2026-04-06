@@ -26,7 +26,5 @@ frontend/.vite/
 Thumbs.db
 .DS_Store
 
-# No subir a remoto (solo local)
-/README.md
-/PROMPTS.md
+# Notas locales opcionales
 /GUIA_ENTREGA_PRUEBA.md
