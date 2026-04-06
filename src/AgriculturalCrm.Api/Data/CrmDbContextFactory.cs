@@ -3,9 +3,6 @@ using Microsoft.EntityFrameworkCore.Design;
 
 namespace AgriculturalCrm.Api.Data;
 
-/// <summary>
-/// Solo para diseño (dotnet ef migrations). No se usa en tiempo de ejecución.
-/// </summary>
 public class CrmDbContextFactory : IDesignTimeDbContextFactory<CrmDbContext>
 {
     public CrmDbContext CreateDbContext(string[] args)

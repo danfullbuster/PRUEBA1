@@ -119,10 +119,10 @@ async function enviar() {
 <template>
   <div class="page">
     <header class="hero">
-      <p class="eyebrow">PoC CRM agrícola</p>
+      <p class="eyebrow">CRM PRUEBA FULLSTACK</p>
       <h1>Registro de clientes y parcelas</h1>
       <p class="lede">
-        Alta de productores: datos de contacto, finca y extensión en hectáreas. Los datos se envían a la API .NET 8.
+        PoC: alta de productores (contacto, finca, hectáreas) contra la Web API .NET 8.
       </p>
     </header>
 

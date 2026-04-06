@@ -54,7 +54,9 @@ public class ClientesControllerTests
 
         var resultado = await controller.Crear(new CrearClienteRequest(), CancellationToken.None);
 
-        Assert.IsType<BadRequestObjectResult>(resultado.Result);
+        var objectResult = Assert.IsType<ObjectResult>(resultado.Result);
+        var details = Assert.IsType<ValidationProblemDetails>(objectResult.Value);
+        Assert.Contains("Nombre", details.Errors.Keys, StringComparer.OrdinalIgnoreCase);
         mock.Verify(s => s.CrearAsync(It.IsAny<CrearClienteRequest>(), It.IsAny<CancellationToken>()), Times.Never);
     }
 

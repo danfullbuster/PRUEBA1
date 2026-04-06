@@ -15,7 +15,6 @@ public class ClientesController : ControllerBase
         _clientesService = clientesService;
     }
 
-    /// <summary>Registra un cliente y su parcela (finca).</summary>
     [HttpPost]
     [ProducesResponseType(typeof(ClienteResponse), StatusCodes.Status201Created)]
     [ProducesResponseType(typeof(ValidationProblemDetails), StatusCodes.Status400BadRequest)]
@@ -38,7 +37,6 @@ public class ClientesController : ControllerBase
         }
     }
 
-    /// <summary>Lista todos los clientes registrados.</summary>
     [HttpGet]
     [ProducesResponseType(typeof(IReadOnlyList<ClienteResponse>), StatusCodes.Status200OK)]
     public async Task<ActionResult<IReadOnlyList<ClienteResponse>>> Listar(CancellationToken cancellationToken)

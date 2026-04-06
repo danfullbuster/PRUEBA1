@@ -4,10 +4,8 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AgriculturalCrm.Api.Data.Migrations;
 
-/// <inheritdoc />
 public partial class InitialCreate : Migration
 {
-    /// <inheritdoc />
     protected override void Up(MigrationBuilder migrationBuilder)
     {
         migrationBuilder.CreateTable(
@@ -34,7 +32,6 @@ public partial class InitialCreate : Migration
             unique: true);
     }
 
-    /// <inheritdoc />
     protected override void Down(MigrationBuilder migrationBuilder)
     {
         migrationBuilder.DropTable(name: "Clientes");

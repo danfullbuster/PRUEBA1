@@ -8,10 +8,19 @@
 # Secrets locales (no subir cadenas reales)
 **/appsettings.*.local.json
 secrets.json
+.env
+.env.*
+!.env.example
+
+# Tests / cobertura
+TestResults/
+coverage/
+*.coverage
 
 # Node / Vue
 frontend/node_modules/
 frontend/dist/
+frontend/.vite/
 
 # OS
 Thumbs.db

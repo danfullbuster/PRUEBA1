@@ -10,7 +10,7 @@ builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
     {
-        Title = "CRM Agrícola — Clientes y parcelas",
+        Title = "CRM PRUEBA FULLSTACK",
         Version = "v1",
         Description = "PoC: registro de clientes y fincas (parcelas)."
     });
@@ -42,14 +42,14 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CRM Agrícola v1"));
-}
+app.UseSwagger();
+app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CRM PRUEBA FULLSTACK v1"));
 
 app.UseCors();
-app.UseHttpsRedirection();
+
+if (!app.Environment.IsDevelopment())
+    app.UseHttpsRedirection();
+
 app.MapControllers();
 
 using (var scope = app.Services.CreateScope())

@@ -1,6 +1,3 @@
-# Pipeline CI: restore, build y pruebas del backend (.NET 8).
-# En Azure DevOps: New pipeline > Azure Repos Git > seleccionar este YAML.
-
 trigger:
   branches:
     include:
